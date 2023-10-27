@@ -6,15 +6,16 @@ interface IApp extends Document {
   appId: string;
   appSecret: string;
   login_endpoint: string;
-  // Add more fields as needed, e.g., app description, allowed redirect URIs, etc.
+  auth_method: string;
 }
 
 const appSchema = new Schema(
   {
     name: { type: String, required: true },
-    appId: { type: String, required: true },
-    appSecret: { type: String, required: true },
     description: { type: String },
+    appId: { type: String, required: true },
+    auth_method: { type: String, required: true, enum: ["passport", "proxy"] },
+    appSecret: { type: String, required: true },
     login_endpoint: { type: String, required: false },
     encrypted: { type: String, required: false },
   },

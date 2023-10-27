@@ -1,6 +1,7 @@
-import { AppCredentials, IUtils } from "../modules/apps/@types/Utils";
+import { AppCredentials, IUtils } from "../@types/Utils";
 import crypto from "crypto";
 import { App } from "../modules/apps/models/apps.model";
+import { encryptData } from "./encryption";
 
 class Utility {
   generateAppCredentials =
@@ -19,6 +20,17 @@ class Utility {
     } else {
       return true;
     }
+  };
+
+  createToken = async (data: { email: string; apps: string }) => {
+    let expiresIn = "2h";
+
+    const token = await encryptData(data);
+
+    const expirationTimestamp = Date.now() + 2 * 60 * 60 * 1000;
+
+    // Store the token and expiration timestamp in the user's session or account information
+    return { token, expiresIn, expirationTimestamp };
   };
 }
 
