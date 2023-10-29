@@ -29,9 +29,10 @@ The Raven IAM Service serves several key use cases:
 
 ### Planned Features (To-Do List)
 
-- [ ] Implement password hashing for enhanced security.
-- [ ] Develop an admin dashboard for user and app management.
+- [x] Implement password hashing for enhanced security.
+- [ ] Implement cross application token verification system.
 - [ ] Add support for multi-factor authentication.
+- [ ] Develop an admin dashboard for user and app management.
 - [ ] Add support for SQL and Postgres Database.
 - [ ] Implement single sign-out (SSO session management).
 - [ ] Enhance documentation for easy setup and integration.

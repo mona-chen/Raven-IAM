@@ -1,6 +1,6 @@
 import express, { Express, Request, Response } from "express";
 import dotenv from "dotenv";
-import "./services/mongoose";
+import "./drivers/mongoose";
 import initModules from "./modules";
 import morgan from "morgan";
 dotenv.config();
