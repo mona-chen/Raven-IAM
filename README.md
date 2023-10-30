@@ -54,6 +54,10 @@ The Raven IAM Service serves several key use cases:
 - Express
 - Redis
 
+### API Documentation
+
+['Documentation Link']('https://documenter.getpostman.com/view/13955459/2s9YXb85Xe')
+
 ### Installation
 
 1. Clone the repository.
