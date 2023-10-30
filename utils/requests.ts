@@ -105,28 +105,4 @@ async function error(res: any, message: string) {
     });
 }
 
-function redis() {
-  const client = new Redis({
-    port: process.env.REDIS_PORT ? parseInt(process.env.REDIS_PORT) : 6379,
-  });
-
-  try {
-    client.on("ready", () => {
-      console.log(
-        "Redis: Connection Established on port " +
-          (process.env.REDIS_PORT || 6379)
-      );
-    });
-    client.on("error", (err) => {
-      console.error("Redis connection error:", err);
-    });
-  } catch (error) {
-    console.log("Redis Error:", error);
-  }
-
-  return client;
-}
-
-const redisClient = redis();
-
-export { success, fail, bad, notfound, error, authHeader, redisClient };
+export { success, fail, bad, notfound, error, authHeader };

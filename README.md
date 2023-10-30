@@ -29,8 +29,11 @@ The Raven IAM Service serves several key use cases:
 
 ### Planned Features (To-Do List)
 
+- [x] Implement Raven Passport Authorization Mechanism.
 - [x] Implement password hashing for enhanced security.
-- [ ] Implement cross application token verification system.
+- [x] Implement cross application token verification system.
+- [x] Implement Multi Login Support.
+- [ ] Implement Proxy Authorization Mechanism.
 - [ ] Add support for multi-factor authentication.
 - [ ] Develop an admin dashboard for user and app management.
 - [ ] Add support for SQL and Postgres Database.
@@ -49,6 +52,7 @@ The Raven IAM Service serves several key use cases:
 - Node.js
 - MongoDB
 - Express
+- Redis
 
 ### Installation
 
