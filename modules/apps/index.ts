@@ -2,7 +2,7 @@ import appsRouter from "./routes";
 
 const appsModule = {
   init: (app: any) => {
-    app.use("/sso", appsRouter);
+    app.use("/admin", appsRouter);
     console.log("[module]: apps module loaded");
   },
 };
