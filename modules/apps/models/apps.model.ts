@@ -5,7 +5,9 @@ interface IApp extends Document {
   description: string;
   appId: string;
   appSecret: string;
+  active: boolean;
   login_endpoint: string;
+  logo: string;
   auth_method: string;
 }
 
@@ -17,6 +19,8 @@ const appSchema = new Schema(
     auth_method: { type: String, required: true, enum: ["passport", "proxy"] },
     appSecret: { type: String, required: true },
     login_endpoint: { type: String, required: false },
+    active: { type: Boolean, default: true },
+    logo: { type: String, required: false },
     encrypted: { type: String, required: false },
   },
   { timestamps: true }

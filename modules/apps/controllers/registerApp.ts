@@ -9,7 +9,6 @@ const Utils = new Utility();
 const validator = new Validator();
 
 async function registerApp(req: Request, res: Response, next: NextFunction) {
-  console.log(req.body);
   if (!req.body) {
     return fail(res, "Invalid request body");
   }
